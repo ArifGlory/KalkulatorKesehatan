@@ -15,7 +15,7 @@ public class BMIActivity extends AppCompatActivity {
 
     EditText etTinggi,etBerat;
     Button btnHitung;
-    TextView tvSubtitle,tvHasil;
+    TextView tvSubtitle,tvHasil,tvSubtitle2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class BMIActivity extends AppCompatActivity {
         btnHitung = findViewById(R.id.btnHitung);
         tvSubtitle = findViewById(R.id.tvSubtitle);
         tvHasil = findViewById(R.id.tvHasil);
+        tvSubtitle2 = findViewById(R.id.tvSubtitle2);
 
         btnHitung.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,12 +45,38 @@ public class BMIActivity extends AppCompatActivity {
                     tinggiInMeter       = tinggiInMeter * tinggiInMeter; //kuadratkan
 
                     double imt = Double.parseDouble(getBerat) / tinggiInMeter;
+                    String kategori = cekKategoriIMT(imt);
+
                     tvHasil.setText(""+ new DecimalFormat("##.##").format(imt) );
+                    tvSubtitle2.setText("Kategori : "+kategori);
 
                     tvSubtitle.setVisibility(View.VISIBLE);
                     tvHasil.setVisibility(View.VISIBLE);
+                    tvSubtitle2.setVisibility(View.VISIBLE);
                 }
             }
         });
+    }
+
+    public String cekKategoriIMT(double imt){
+        String kategori = "";
+        if (imt < 16){
+            kategori =  "sangat di bawah berat badan ideal";
+        } else if (imt > 16 && imt < 18.25){
+            kategori =  "di bawah berat badan ideal";
+        }else if (imt > 18.6 && imt < 25){
+            kategori =  "berat badan ideal";
+        }else if (imt > 25.1 && imt < 30){
+            kategori =  "berat kegemukan";
+        }else if (imt > 30.1 && imt < 35){
+            kategori =  "Obesitas";
+        }else if (imt > 35.1 && imt < 40){
+            kategori =  "Obesitas kelas dua";
+        }else if (imt > 40){
+            kategori =  "Morbid Obesitas";
+        }
+
+
+        return  kategori;
     }
 }

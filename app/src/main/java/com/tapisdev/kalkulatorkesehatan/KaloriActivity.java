@@ -50,16 +50,17 @@ public class KaloriActivity extends AppCompatActivity {
                 }
                 else{
                     if (rbPria.isChecked()){
+                        //bmr (Basal Metabolic Rate)
                         kaloriNeed = 66.5 + (13.8 * Double.parseDouble(getBerat)) + (5 * Double.parseDouble(getTinggi));
                         kaloriNeed = kaloriNeed - (6.8 * Double.parseDouble(getUmur));
                     }else if (rbWanita.isChecked()){
                         kaloriNeed = 665.1 + (9.6 * Double.parseDouble(getBerat)) + (1.9 * Double.parseDouble(getTinggi));
                         kaloriNeed = kaloriNeed - (4.7 * Double.parseDouble(getUmur));
                     }
-                    //bmr
-                    //kaloriNeed = kaloriNeed * 1.375;
+                    //ini TDEE (Total Daily energy Expenditure)
+                    double tdee = kaloriNeed * 1.375;
 
-                    tvHasil.setText(""+ new DecimalFormat("##.##").format(kaloriNeed) + " Kcal");
+                    tvHasil.setText(""+ new DecimalFormat("##.##").format(tdee) + " Kcal");
                     tvSubtitle.setVisibility(View.VISIBLE);
                     tvHasil.setVisibility(View.VISIBLE);
                 }

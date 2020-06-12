@@ -33,7 +33,7 @@ public class DenyutJantungActivity extends AppCompatActivity {
                     Toast.makeText(DenyutJantungActivity.this,"Umur harus diisi",Toast.LENGTH_SHORT).show();
                 }else{
                     int maxHeatRate = 220 - Integer.parseInt(getUmur);
-                    tvHasil.setText(""+maxHeatRate);
+                    tvHasil.setText(""+maxHeatRate+ " denyut/menit");
 
                     tvSubtitle.setVisibility(View.VISIBLE);
                     tvHasil.setVisibility(View.VISIBLE);

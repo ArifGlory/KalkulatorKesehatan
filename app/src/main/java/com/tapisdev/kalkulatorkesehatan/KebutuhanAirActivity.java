@@ -33,8 +33,8 @@ public class KebutuhanAirActivity extends AppCompatActivity {
                     Toast.makeText(KebutuhanAirActivity.this,"Berat harus diisi",Toast.LENGTH_SHORT).show();
                 }else{
 
-                    double intake = ( Double.parseDouble(getBerat) * 5 ) / 8;
-                    tvHasil.setText(""+intake);
+                    double intake = ( Double.parseDouble(getBerat) * 0.03 ) ;
+                    tvHasil.setText(""+intake+" liter");
 
                     tvSubtitle.setVisibility(View.VISIBLE);
                     tvHasil.setVisibility(View.VISIBLE);
