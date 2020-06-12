@@ -9,9 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DenyutJantungActivity"
-            android:label="Denyut Jantung"></activity>
-        <activity android:name=".MainActivity"
+        <activity android:name=".KebutuhanAirActivity"></activity>
+        <activity
+            android:name=".KaloriActivity"
+            android:label="Kebutuhan Kalori" />
+        <activity
+            android:name=".BMIActivity"
+            android:label="Indeks Masa Tubuh" />
+        <activity
+            android:name=".DenyutJantungActivity"
+            android:label="Denyut Jantung" />
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

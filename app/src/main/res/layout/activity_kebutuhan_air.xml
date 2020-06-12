@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Denyut Jantung Maksimal"
+            android:text="Kebutuhan Air"
             android:textColor="@color/black2"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -46,13 +46,13 @@
                 android:layout_marginLeft="15dp" />
 
             <EditText
-                android:id="@+id/etUmur"
+                android:id="@+id/etBerat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginRight="10dp"
                 android:background="#00000000"
-                android:hint="masukkan Umur anda"
+                android:hint="masukkan berat anda"
                 android:inputType="number"
                 android:padding="5dp"
                 android:textColor="@color/black2"
@@ -79,7 +79,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Denyut jantung maksimal"
+        android:text="Kebutuhan air anda"
         android:id="@+id/tvSubtitle"
         android:visibility="invisible"
         android:layout_above="@+id/tvHasil"
