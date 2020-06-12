@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".KebutuhanAirActivity"></activity>
+        <activity android:name=".TinggiAnakActivity"
+            android:label="Tinggi Anak"></activity>
+        <activity
+            android:name=".PenguranganBeratActivity"
+            android:label="Pengurangan Berat" />
+        <activity
+            android:name=".KebutuhanAirActivity"
+            android:label="Kebutuhan Air" />
         <activity
             android:name=".KaloriActivity"
             android:label="Kebutuhan Kalori" />

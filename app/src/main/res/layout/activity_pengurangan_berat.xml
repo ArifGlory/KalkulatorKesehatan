@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@color/colorBg"
     android:layout_height="match_parent"
-    tools:context=".KebutuhanAirActivity">
+    tools:context=".PenguranganBeratActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kebutuhan Air"
+            android:text="Pengurangan Berat"
             android:textColor="@color/black2"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -79,7 +79,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kebutuhan air anda"
+        android:text="Kalori deficit anda"
         android:id="@+id/tvSubtitle"
         android:visibility="invisible"
         android:layout_above="@+id/tvHasil"

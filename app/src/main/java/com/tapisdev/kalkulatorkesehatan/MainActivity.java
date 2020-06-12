@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    RelativeLayout rlHeartbeat,rlBodyMass,rlKalori,rlWaterNeed;
+    RelativeLayout rlHeartbeat,rlBodyMass,rlKalori,rlWaterNeed,rlReduceMass,rlChildHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         rlBodyMass = findViewById(R.id.rlBodyMass);
         rlKalori = findViewById(R.id.rlKalori);
         rlWaterNeed = findViewById(R.id.rlWaterNeed);
+        rlReduceMass = findViewById(R.id.rlReduceMass);
+        rlChildHeight = findViewById(R.id.rlChildHeight);
 
         rlHeartbeat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +48,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,KebutuhanAirActivity.class);
+                startActivity(intent);
+            }
+        });
+        rlReduceMass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,PenguranganBeratActivity.class);
+                startActivity(intent);
+            }
+        });
+        rlChildHeight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,TinggiAnakActivity.class);
                 startActivity(intent);
             }
         });
